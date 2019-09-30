@@ -9,10 +9,10 @@ android {
     buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "com.inteligolife.app"
-        minSdkVersion 20
+        minSdkVersion 25
         targetSdkVersion 29
-        versionCode 2
-        versionName "1.01"
+        versionCode 4
+        versionName "1.03"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
