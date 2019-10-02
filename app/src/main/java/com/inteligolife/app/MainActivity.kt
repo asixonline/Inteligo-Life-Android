@@ -8,16 +8,24 @@ import kotlinx.android.synthetic.main.activity_main.*
 //import android.view.WindowManager
 import android.webkit.WebViewClient
 
+import com.onesignal.OneSignal
+
+
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(R.layout.activity_main)
+
+        // OneSignal Initialization
+        OneSignal.startInit(this)
+            .inFocusDisplaying(OneSignal.OSInFocusDisplayOption.Notification)
+            .unsubscribeWhenNotificationsAreDisabled(true)
+            .init()
 
         val settings: WebSettings = webView.settings
         settings.javaScriptEnabled = true
-        webView.loadUrl("http://dev.asixonline.com/inteligolife_app/")
+        webView.loadUrl("https://www.inteligolife.com/app/")
         webView.webViewClient = WebViewClient() //Open on self window
 
 

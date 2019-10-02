@@ -1,8 +1,25 @@
+buildscript {
+    repositories {
+        maven { url 'https://plugins.gradle.org/m2/'}
+    }
+    dependencies {
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:[0.12.4, 0.99.99]'
+    }
+}
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+
+repositories {
+    maven { url 'https://maven.google.com' }
+}
+
+
 apply plugin: 'com.android.application'
 
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 29
@@ -11,9 +28,14 @@ android {
         applicationId "com.inteligolife.app"
         minSdkVersion 25
         targetSdkVersion 29
-        versionCode 4
-        versionName "1.03"
+        versionCode 6
+        versionName "1.05"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [
+                onesignal_app_id: '96898db2-4ea7-4e10-ab1a-bf0c325b8c3a',
+                // Project number pulled from dashboard, local value is ignored.
+                onesignal_google_project_number: 'REMOTE'
+        ]
     }
     buildTypes {
         release {
@@ -32,4 +54,13 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    // add SDKs for desired Firebase products
+    // https://firebase.google.com/docs/android/setup#available-libraries
+
+    implementation 'com.onesignal:OneSignal:[3.11.2, 3.99.99]'
+
 }
+
+// Add to the bottom of the file
+apply plugin: 'com.google.gms.google-services'

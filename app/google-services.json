@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1007953968218",
+    "firebase_url": "https://inteligo-life-push.firebaseio.com",
+    "project_id": "inteligo-life-push",
+    "storage_bucket": "inteligo-life-push.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1007953968218:android:ce861d748968682808ac63",
+        "android_client_info": {
+          "package_name": "com.inteligolife.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1007953968218-66r10sho86mvq4g7e1gpp9t5kc4pdn47.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.inteligolife.app",
+            "certificate_hash": "1a2a5977a07a1a7f933075b47183f11518d8cfe0"
+          }
+        },
+        {
+          "client_id": "1007953968218-2203lok8789vm37ui3qsrrtm3japk47r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfmNHXHWATGZ9Qn9kwPjQg-jjKS3pE5d0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1007953968218-2203lok8789vm37ui3qsrrtm3japk47r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
