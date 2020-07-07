@@ -28,8 +28,8 @@ android {
         applicationId "com.inteligolife.app"
         minSdkVersion 25
         targetSdkVersion 29
-        versionCode 8
-        versionName "1.07"
+        versionCode 9
+        versionName "1.08"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         manifestPlaceholders = [
                 onesignal_app_id: '96898db2-4ea7-4e10-ab1a-bf0c325b8c3a',
